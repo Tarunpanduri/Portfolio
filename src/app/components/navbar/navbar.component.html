@@ -2,7 +2,6 @@
   <ul class="navbar-list">
     <li class="navbar-item" *ngFor="let label of ['About', 'Resume', 'Portfolio', 'Contact']; let i = index">
       <button
-        #navLink
         class="navbar-link"
         [class.active]="i === activeIndex"
         (click)="onNavClick(i)"
