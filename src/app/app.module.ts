@@ -19,7 +19,7 @@ import { ContactComponent } from './components/contact/contact.component';
     AboutComponent,
     ResumeComponent,
     PortfolioComponent,
-    ContactComponent  // ✅ Only declare it once
+    ContactComponent 
   ],
   imports: [
     BrowserModule,
@@ -27,6 +27,6 @@ import { ContactComponent } from './components/contact/contact.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]  // ✅ This is the key
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]  
 })
 export class AppModule { }
