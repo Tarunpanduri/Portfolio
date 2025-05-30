@@ -1,18 +1,18 @@
-    <aside class="sidebar" data-sidebar>
+    <aside class="sidebar" data-sidebar [class.active]="isExpanded">
 
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/avatar-1.png" alt="Tarun Panduri" width="80">
+          <img src="./assets/images/my-avatar.png" alt="Tarun Panduri" width="80">
         </figure>
 
         <div class="info-content">
           <h1 class="name" title="Tarun Panduri">Tarun Panduri</h1>
 
-          <p class="title" style="margin-bottom: 50;">Web & App Developer</p>
+          <p class="title">Web & App Developer</p>
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
+        <button class="info_more-btn" data-sidebar-btn (click)="toggleSidebar()">
           <span>Show Contacts</span>
 
           <ion-icon name="chevron-down"></ion-icon>
@@ -35,7 +35,7 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:Tarunpanduri88@gmail.com" class="contact-link">Tarunpanduri88gmail.com</a>
+                  <a href="mailto:Tarunpanduri88@gmail.com" class="contact-link">Tarunpanduri88&#64;gmail.com</a>
             </div>
 
           </li>

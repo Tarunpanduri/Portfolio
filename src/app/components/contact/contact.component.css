@@ -1,0 +1,58 @@
+/* Notification container */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #1E1E1F;
+  border: 1.5px solid #FFD700; /* golden border for all */
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  min-width: 280px;
+  z-index: 9999;
+  user-select: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-sizing: border-box;
+}
+
+/* Show notification */
+.notification.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Success text */
+.notification.success {
+  color: #22c55e; /* classy green */
+  border-color: #FFD700; /* golden border */
+}
+
+/* Error text */
+.notification.error {
+  color: #ef4444; /* pleasant red */
+  border-color: #FFD700; /* golden border */
+}
+
+/* Optional icon styling */
+.notification ion-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+/* Error small text (validation messages, etc.) */
+.error small {
+  color: #ef4444; /* pleasant red */
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+  display: block;
+  font-weight: 600;
+}

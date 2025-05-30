@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
   selector: 'app-resume',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './resume.component.css'
 })
 export class ResumeComponent {
-
+  @Input() isActive: boolean = false;
 }

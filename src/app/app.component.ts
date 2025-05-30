@@ -8,10 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  activePage = 'about'; // Default page
+  activeSection = 'about';
 
-  setActivePage(page: string) {
-    this.activePage = page;
-    window.scrollTo(0, 0);
+  setActiveSection(section: string) {
+    this.activeSection = section;
   }
 }

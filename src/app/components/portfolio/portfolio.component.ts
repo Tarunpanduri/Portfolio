@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './portfolio.component.css'
 })
 export class PortfolioComponent {
+  @Input() isActive: boolean = false;
 
 }

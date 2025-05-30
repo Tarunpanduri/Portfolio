@@ -1,0 +1,6 @@
+@media (max-width: 600px) {
+  .sidebar.active {
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+}

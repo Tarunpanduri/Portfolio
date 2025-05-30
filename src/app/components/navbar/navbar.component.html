@@ -1,12 +1,39 @@
 <nav class="navbar">
   <ul class="navbar-list">
-    <li class="navbar-item" *ngFor="let label of ['About', 'Resume', 'Portfolio', 'Contact']; let i = index">
+    <li class="navbar-item">
       <button
         class="navbar-link"
-        [class.active]="i === activeIndex"
-        (click)="onNavClick(i)"
+        [class.active]="activeSection === 'about'"
+        (click)="changeSection('about')"
       >
-        {{ label }}
+        About
+      </button>
+    </li>
+    <li class="navbar-item">
+      <button
+        class="navbar-link"
+        [class.active]="activeSection === 'resume'"
+        (click)="changeSection('resume')"
+      >
+        Resume
+      </button>
+    </li>
+    <li class="navbar-item">
+      <button
+        class="navbar-link"
+        [class.active]="activeSection === 'portfolio'"
+        (click)="changeSection('portfolio')"
+      >
+        Portfolio
+      </button>
+    </li>
+    <li class="navbar-item">
+      <button
+        class="navbar-link"
+        [class.active]="activeSection === 'contact'"
+        (click)="changeSection('contact')"
+      >
+        Contact
       </button>
     </li>
   </ul>
