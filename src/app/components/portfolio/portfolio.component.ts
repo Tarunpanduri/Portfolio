@@ -5,7 +5,7 @@ import { Component, Input, OnInit } from '@angular/core';
 interface Project {
   title: string;
   image: string;
-  category: string;
+  category: string[];
 }
 
 
@@ -21,19 +21,14 @@ export class PortfolioComponent implements OnInit {
   dropdownOpen: boolean = false;
 
 
-  categories: string[] = ['All', 'Web development','Applications','Web design','Excel' ];
+  categories: string[] = ['All', 'Web development','Application','Web design','Excel' ];
   selectedCategory: string = 'All';
 
   allProjects: Project[] = [
-    { title: 'Finance', image: './assets/images/project-1.jpg', category: 'Web development' },
-    { title: 'Orizon', image: './assets/images/project-2.png', category: 'Web development' },
-    { title: 'Fundo', image: './assets/images/project-3.jpg', category: 'Web design' },
-    { title: 'Brawlhalla', image: './assets/images/project-4.png', category: 'Applications' },
-    { title: 'DSM.', image: './assets/images/project-5.png', category: 'Web design' },
-    { title: 'MetaSpark', image: './assets/images/project-6.png', category: 'Web design' },
-    { title: 'Summary', image: './assets/images/project-7.png', category: 'Web development' },
-    { title: 'Task Manager', image: './assets/images/project-8.jpg', category: 'Applications' },
-    { title: 'Arrival', image: './assets/images/project-9.png', category: 'Web development' },
+    { title: 'Hrm', image: './assets/images/p1.png', category: ['Web development', 'Excel'] },
+    { title: 'One Quest', image: './assets/images/p4.png', category: ['Application'] },
+    { title: 'Clim IT', image: './assets/images/p2.png', category: ['Web development'] },
+    { title: 'Royal Touch', image: './assets/images/p3.png', category: ['Web design'] },
   ];
 
   filteredProjects: Project[] = [];
@@ -42,15 +37,24 @@ export class PortfolioComponent implements OnInit {
     this.applyFilter();
   }
 
-  applyFilter() {
-    if (this.selectedCategory === 'All') {
-      this.filteredProjects = this.allProjects;
-    } else {
-      this.filteredProjects = this.allProjects.filter(
-        (p) => p.category === this.selectedCategory
-      );
+applyFilter() {
+  if (this.selectedCategory === 'All') {
+    const seenTitles = new Set<string>();
+    this.filteredProjects = [];
+
+    for (const project of this.allProjects) {
+      if (!seenTitles.has(project.title)) {
+        this.filteredProjects.push(project);
+        seenTitles.add(project.title);
+      }
     }
+  } else {
+    this.filteredProjects = this.allProjects.filter(
+      (p) => p.category.includes(this.selectedCategory)
+    );
   }
+}
+
 
   selectCategory(category: string) {
     this.selectedCategory = category;
