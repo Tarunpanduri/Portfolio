@@ -22,7 +22,7 @@ export class AboutComponent {
       imgSrc: './assets/images/avatar-1.png',
       name: 'Daniel Lewis',
       date: '2021-06-14',
-      text: `Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.`
+      text: `Tarun was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.`
     },
     {
       imgSrc: './assets/images/avatar-2.png',
@@ -30,18 +30,18 @@ export class AboutComponent {
       date: '2021-06-12',
       text: `We were very pleased with the work done...`
     },
-    {
-      imgSrc: './assets/images/avatar-3.png',
-      name: 'Emily Evans',
-      date: '2021-06-10',
-      text: `She has a lot of experience and is very concerned...`
-    },
-    {
-      imgSrc: './assets/images/avatar-4.png',
-      name: 'Henry William',
-      date: '2021-06-08',
-      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit...`
-    }
+    // {
+    //   imgSrc: './assets/images/avatar-3.png',
+    //   name: 'Emily Evans',
+    //   date: '2021-06-10',
+    //   text: `She has a lot of experience and is very concerned...`
+    // },
+    // {
+    //   imgSrc: './assets/images/avatar-4.png',
+    //   name: 'Henry William',
+    //   date: '2021-06-08',
+    //   text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit...`
+    // }
   ];
 
   openModal(data: any) {
