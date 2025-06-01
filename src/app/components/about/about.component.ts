@@ -24,12 +24,12 @@ export class AboutComponent {
       date: '2021-06-14',
       text: `Tarun was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.`
     },
-    // {
-    //   imgSrc: './assets/images/avatar-2.png',
-    //   name: 'Jessica Miller',
-    //   date: '2021-06-12',
-    //   text: `We were very pleased with the work done...`
-    // },
+    {
+      imgSrc: './assets/images/avatar-2.png',
+      name: 'Jessica Miller',
+      date: '2021-06-12',
+      text: `We were very pleased with the work done...`
+    },
     // {
     //   imgSrc: './assets/images/avatar-3.png',
     //   name: 'Emily Evans',
