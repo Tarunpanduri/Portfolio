@@ -14,28 +14,29 @@ export class AboutComponent {
     imgSrc: '',
     name: '',
     date: '',
-    text: ''
+    text: '',
+    proffession: ''
   };
 
   testimonials = [
     {
       imgSrc: './assets/images/avatar-1.png',
-      name: 'Daniel Lewis',
-      date: '2021-06-14',
-      text: `Tarun was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.`
+      name: 'Sri Hari Yiboina',
+      proffession: 'Director,  ClimIt Solutions Pvt Ltd',
+      text: `Tarun is highly dedicated, detail-oriented, and consistently delivers work of exceptional quality. He approaches every project with a problem-solving mindset and communicates clearly, making collaboration smooth and productive.`
     },
     {
       imgSrc: './assets/images/avatar-2.png',
-      name: 'Jessica Miller',
-      date: '2021-06-12',
-      text: `We were very pleased with the work done...`
+      name: 'Yashwanth Tadi',
+      proffession: ', ClimIt Solutions Pvt Ltd',
+      text: `Tarun combines technical skill with creativity, bringing fresh ideas and thoughtful execution to every project. He has a sharp eye for detail and a genuine passion for producing meaningful work. His ability to balance creativity with practical solutions makes him stand out.`
     },
-    // {
-    //   imgSrc: './assets/images/avatar-3.png',
-    //   name: 'Emily Evans',
-    //   date: '2021-06-10',
-    //   text: `She has a lot of experience and is very concerned...`
-    // },
+    {
+      imgSrc: './assets/images/avatar-3.png',
+      name: 'Ibrahim M',
+      proffession: 'Manager, TolzeTech',
+      text: `Tarun is easy to collaborate with. He’s responsive, open to feedback, and makes the whole process smooth from start to finish. I always felt updated on the progress, and he made sure my ideas were understood and reflected in the final outcome.`
+    },
     // {
     //   imgSrc: './assets/images/avatar-4.png',
     //   name: 'Henry William',

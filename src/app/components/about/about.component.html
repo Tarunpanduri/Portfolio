@@ -95,13 +95,11 @@
         </section>
 
 
-        <!--
-          - testimonials
-        -->
+        <!--- testimonials-->
 
                     <section class="testimonials">
 
-                      <h3 class="h3 testimonials-title">Testimonials</h3>
+                      <h3 class="h3 testimonials-title">What People Say</h3>
 
                       <ul class="testimonials-list has-scrollbar">
               <li
@@ -146,9 +144,10 @@
 
                 <div class="modal-content">
                   <h4 class="h3 modal-title">{{ modalData.name }}</h4>
-                  <time [attr.datetime]="modalData.date">
-                    {{ modalData.date | date: 'dd MMM, yyyy' }}
-                  </time>
+                  <!-- <time [attr.datetime]="modalData.date">
+                    {{ modalData.date  }}
+                  </time> -->
+                  <p class="proffession">{{modalData.proffession}}</p>
                   <div>
                     <p>{{ modalData.text }}</p>
                   </div>
