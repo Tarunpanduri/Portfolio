@@ -28,7 +28,7 @@ export class AboutComponent {
     {
       imgSrc: './assets/images/avatar-2.png',
       name: 'Yashwanth Tadi',
-      proffession: ', ClimIt Solutions Pvt Ltd',
+      proffession: 'CTO, ClimIt Solutions Pvt Ltd',
       text: `Tarun combines technical skill with creativity, bringing fresh ideas and thoughtful execution to every project. He has a sharp eye for detail and a genuine passion for producing meaningful work. His ability to balance creativity with practical solutions makes him stand out.`
     },
     {

@@ -4,3 +4,10 @@
     overflow-y: auto;
   }
 }
+
+
+@media (min-width: 1024px) {
+  .sidebar-info_more {
+    display: block !important;
+  }
+}

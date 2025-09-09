@@ -15,8 +15,9 @@
         <button class="info_more-btn" data-sidebar-btn (click)="toggleSidebar()">
           <span>Show Contacts</span>
 
-          <ion-icon name="chevron-down"></ion-icon>
+          <ion-icon [name]="isExpanded ? 'chevron-up' : 'chevron-down'"></ion-icon>
         </button>
+
 
       </div>
 

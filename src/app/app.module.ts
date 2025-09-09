@@ -12,6 +12,8 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ContactComponent } from './components/contact/contact.component';
 
 import { FormsModule } from '@angular/forms';
+import { V2homeComponent } from './components/v2home/v2home.component';
+import { V2aboutComponent } from './components/v2about/v2about.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { FormsModule } from '@angular/forms';
     AboutComponent,
     ResumeComponent,
     PortfolioComponent,
-    ContactComponent 
+    ContactComponent,
+    V2homeComponent,
+    V2aboutComponent 
   ],
   imports: [
     BrowserModule,
