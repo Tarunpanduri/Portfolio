@@ -7,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrl: './v2about.component.css'
 })
 export class V2aboutComponent {
-
+  skills: string[] = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'Angular',
+    'React Native',
+    'React.Js',
+    'Node.Js',
+    'Tailwind CSS',
+    'Figma',
+    'Ms Excel'
+  ];
 }
