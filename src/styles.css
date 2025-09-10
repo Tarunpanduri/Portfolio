@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 /* You can add global styles to this file, and also import other style files */
 /*-----------------------------------*\
   #style.css
@@ -15,18 +20,10 @@
 /*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 
 :root {
-
-  /**
-   * colors
-   */
-
-  /* gradient */
 
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
@@ -59,7 +56,6 @@
     hsl(35, 100%, 68%)
   );
 
-  /* solid */
 
   --jet: hsl(0, 0%, 22%);
   --onyx: hsl(240, 1%, 17%);
@@ -74,14 +70,9 @@
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
-  /**
-   * typography
-   */
 
-  /* font-family */
   --ff-poppins: 'Poppins', sans-serif;
 
-  /* font-size */
   --fs-1: 24px;
   --fs-2: 18px;
   --fs-3: 17px;
@@ -91,15 +82,12 @@
   --fs-7: 13px;
   --fs-8: 11px;
 
-  /* font-weight */
   --fw-300: 300;
   --fw-400: 400;
   --fw-500: 500;
   --fw-600: 600;
 
-  /**
-   * shadow
-   */
+
   
   --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
   --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
@@ -107,9 +95,7 @@
   --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
   --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
 
-  /**
-   * transition
-   */
+
 
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease-in-out;

@@ -1,6 +1,39 @@
 /*-----------------------------------*\
   #style.css
 \*-----------------------------------*/
+.version-switcher {
+  position: fixed;
+  bottom: -80px;
+  left: 0;
+  width: 100%;
+  background: #222;
+  color: white;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  transition: bottom 0.3s ease-in-out;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.version-switcher.visible {
+  bottom: 0;
+}
+
+.version-switcher button {
+  background: #444;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.version-switcher button:hover {
+  background: #666;
+}
 
 
 /**
