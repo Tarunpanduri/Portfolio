@@ -14,6 +14,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { V2homeComponent } from './components/v2home/v2home.component';
 import { V2aboutComponent } from './components/v2about/v2about.component';
+import { AnimateOnScrollDirective } from './directives/AnimateOnScroll/animate-on-scroll.directive';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { V2aboutComponent } from './components/v2about/v2about.component';
     PortfolioComponent,
     ContactComponent,
     V2homeComponent,
-    V2aboutComponent 
+    V2aboutComponent,
+    AnimateOnScrollDirective 
   ],
   imports: [
     BrowserModule,
