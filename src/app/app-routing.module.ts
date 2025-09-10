@@ -6,7 +6,7 @@ import { V2homeComponent } from './components/v2home/v2home.component';
 
 
 const routes: Routes = [
-    { path: '', component: V2homeComponent },
+    { path: '', component: V2aboutComponent },
 ];
 
 @NgModule({
