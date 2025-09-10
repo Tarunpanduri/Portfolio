@@ -4,7 +4,12 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        bebas: ['Bebas Neue', 'sans-serif'],
+        manrope: ['Manrope', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
