@@ -7,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrl: './v2home.component.css'
 })
 export class V2homeComponent {
+    skills: string[] = [
+    'HTML5',
+    'CSS',
+    'Tailwind CSS',
+    'JavaScript',
+    'Angular',
+    'Node.Js',
+    'React.Js',
+    'Ms Excel',
+    'Figma',
+    'React Native',
+  ];
 
 }

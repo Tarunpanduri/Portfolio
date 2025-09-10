@@ -11,13 +11,14 @@
     </nav>
   </header>
 
+<!-- HERO SECTION -->
   <main
     class="flex flex-col-reverse lg:flex-row items-center justify-between px-4 flex-1 md:px-16 gap-12"
   >
     <div
       class="flex flex-col items-start max-w-lg opacity-0 -translate-x-10 animate-slideLeft"
     >
-      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bebas leading-tight">
+      <h2 class="text-5xl md:text-6xl lg:text-6xl font-bebas leading-tight">
         HI, I AM <br /> TARUN PANDURI
       </h2>
       <p
@@ -30,7 +31,7 @@
       <div class="flex items-center gap-4 mt-8">
         <a
           href="#"
-          class="bg-lime-400 text-black font-manrope text-sm px-6 py-3 rounded-full shadow hover:bg-lime-500 transition"
+          class="bg-lime-300 text-black font-manrope text-sm px-6 py-3 rounded-full shadow hover:bg-lime-500 transition"
         >
           CONTACT ME
         </a>
@@ -66,3 +67,78 @@
     </div>
   </main>
 </div>
+
+
+
+<!-- ABOUT ME -->
+<section class="bg-black text-white py-0 md:py-16 px-6 md:px-[2.5rem] lg:px-[4.5rem]">
+  <div class="container mx-auto flex flex-col md:flex-row items-start">
+    
+    <div class="md:w-1/3  md:text-left ">
+      <h2 class="text-5xl md:text-6xl font-bebas tracking-wide text-white mb-2">
+        ABOUT ME
+      </h2>
+    </div>
+
+    <div class="md:w-2/3 space-y-6">
+      <p class="text-lg font-manrope font-semibold leading-relaxed text-gray-100">
+        A Web & App Developer from Kakinada, Turning Ideas into Seamless Digital Experiences.
+      </p>
+
+      <p class="text-sm md:text-base font-manrope leading-relaxed text-gray-400">
+        I'm Tarun Panduri, a passionate Web and App Developer from Kakinada, Andhra Pradesh, 
+        with a creative flair for design using Figma. I specialize in transforming ideas into 
+        seamless digital experiences—whether it’s building dynamic websites or crafting intuitive 
+        mobile apps. My work blends functionality with aesthetic appeal, making sure every product 
+        not only works flawlessly but also looks stunning.
+        <br />
+        With a strong foundation in development and an eye for design, I focus on creating 
+        user-friendly interfaces that are both engaging and impactful. I believe great digital 
+        products are born at the intersection of clean code and smart design, and I strive to 
+        deliver that balance in every project. Let’s build something beautiful that speaks for itself.
+      </p>
+
+      <div class="flex flex-wrap items-center gap-4">
+        <a
+          href="#"
+          class="bg-lime-300 text-black px-6 py-2 rounded-full font-manrope font-semibold text-sm shadow-md hover:bg-lime-300 transition"
+        >
+          DOWNLOAD RESUME
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES SECTION -->
+<section class="bg-black text-white py-16 px-6 md:px-[2.5rem] lg:px-[4.5rem]">
+  <div class="container mx-auto flex flex-col md:flex-row items-start ">
+
+    <div class="md:w-1/3 text-center md:text-left">
+      <h2 class="text-5xl md:text-6xl font-bebas tracking-wide text-white mb-2">
+        MY CAPABILITIES
+      </h2>
+    </div>
+
+    <div class="md:w-2/3 space-y-6">
+
+      <p class="text-sm md:text-base font-manrope leading-relaxed text-gray-400">
+        My skill set is always evolving—I believe growth comes from curiosity and the drive to learn. 
+        I actively explore new technologies, refine my techniques, and adapt to emerging trends 
+        to bring fresh, innovative solutions to the table.
+      </p>
+
+      
+        <div class="flex flex-wrap gap-4">
+        <span
+            *ngFor="let skill of skills"
+            class="px-5 py-2 rounded-full border border-gray-500 text-sm font-manrope text-gray-300 hover:bg-lime-300 hover:text-black transition cursor-pointer"
+        >
+            {{ skill }} 
+        </span>
+        </div>
+    </div>
+  </div>
+</section>
+
+
