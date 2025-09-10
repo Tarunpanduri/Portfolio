@@ -62,21 +62,21 @@
   </div>
 </section>
 
-<!-- Capabilities Section -->
+<!-- CAPABILITIES SECTION-->
 <section class="bg-black text-white py-16 px-6 md:px-[2.5rem] lg:px-[4.5rem]">
-  <div class="container mx-auto flex flex-col md:flex-row items-start gap-10">
+  <div class="container mx-auto flex flex-col md:flex-row items-start">
 
-    <!-- Left Heading -->
+    
     <div class="md:w-1/3 text-center md:text-left">
       <h2 class="text-5xl md:text-6xl font-bebas tracking-wide text-white">
         MY CAPABILITIES
       </h2>
     </div>
 
-    <!-- Right Content -->
+   
     <div class="md:w-2/3 space-y-6">
 
-      <!-- Description -->
+     
       <p class="text-sm md:text-base font-manrope leading-relaxed text-gray-400">
         My skill set is always evolving—I believe growth comes from curiosity and the drive to learn. 
         I actively explore new technologies, refine my techniques, and adapt to emerging trends 
@@ -84,11 +84,11 @@
       </p>
 
       
-     <!-- Skills -->
+     
         <div class="flex flex-wrap gap-4">
         <span
             *ngFor="let skill of skills"
-            class="px-5 py-2 rounded-full border border-gray-500 text-sm font-manrope"
+            class="px-5 py-2 rounded-full border border-gray-500 text-sm font-manrope hover:bg-lime-300 transition"
         >
             {{ skill }}
         </span>
@@ -96,5 +96,139 @@
     </div>
   </div>
 </section>
+
+<!-- EXPERIENCE -->
+<section class="bg-black text-white py-16 px-6 md:px-[2.5rem] lg:px-[4.5rem]">
+  <div class="container mx-auto flex flex-col md:flex-row ">
+
+    <!-- Left Heading -->
+    <div class="md:w-1/3 text-center md:text-left">
+      <h2 class="text-5xl md:text-6xl font-bebas tracking-wide">
+        MY EXPERIENCE
+      </h2>
+    </div>
+
+    <!-- Right Content -->
+    <div class="md:w-2/3 space-y-10">
+
+      <!-- Experience Item 1 -->
+      <div class="flex flex-col md:flex-row md:justify-between">
+        <div>
+          <h3 class="text-lg font-manrope font-semibold text-white">
+            Associate Software developer
+          </h3>
+          <p class="text-sm font-manrope text-gray-400 max-w-xl">
+            I specialize in building, testing, and maintaining scalable, 
+            high-quality applications. Skilled in HTML, CSS, JavaScript, 
+            Angular, React.js, and React Native, I create user-friendly 
+            solutions with strong backend support through database management 
+            and API integration. I collaborate in Agile teams, optimize 
+            performance, and ensure best practices through debugging, 
+            troubleshooting, and code reviews.
+          </p>
+        </div>
+        <span class="text-sm font-manrope text-gray-300 mt-2 md:mt-0">
+          Oct 2024 — Present
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+
+<section class="bg-black text-white py-16 px-6 md:px-[2.5rem] lg:px-[4.5rem]">
+  <div class="container mx-auto flex flex-col md:flex-row">
+
+    <!-- Left Side -->
+    <div class="md:w-1/3 flex flex-col justify-between space-y-8">
+      <!-- Heading & Info -->
+      <div>
+        <h2 class="text-5xl md:text-6xl font-bebas mb-4">LET’S CONNECT</h2>
+        <p class="text-sm font-manrope text-gray-300 mb-2">
+          Say hello at <a href="mailto:robertgarcia@gmail.com" class="underline hover:text-lime-300">
+            Tarunpanduri88@gmail.com
+          </a>
+        </p>
+        <p class="text-sm font-manrope text-gray-300">
+          For more info, here’s my
+          <a href="#" class="underline hover:text-lime-300">resume</a>
+        </p>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="flex gap-2">
+        <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full text-lime-300 hover:text-white transition">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full text-lime-300 hover:text-white transition">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full text-lime-300 hover:text-white transition">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full text-lime-300 hover:text-white transition">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+
+      <!-- Footer -->
+      <p class="text-xs font-manrope text-gray-500">
+        © 2023 Tarun Panduri
+      </p>
+    </div>
+
+    <!-- Right Side (Form) -->
+    <div class="md:w-2/3">
+      <form class="space-y-6">
+        <!-- Name -->
+        <div>
+          <label class="block text-sm font-manrope mb-1">Name</label>
+          <input
+            type="text"
+            class="w-full bg-gray-900 text-white px-4 py-3 rounded-md border border-gray-700 focus:outline-none focus:ring-2 focus:ring-lime-300"
+          />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label class="block text-sm font-manrope mb-1">Email</label>
+          <input
+            type="email"
+            class="w-full bg-gray-900 text-white px-4 py-3 rounded-md border border-gray-700 focus:outline-none focus:ring-2 focus:ring-lime-300"
+          />
+        </div>
+
+        <!-- Subject -->
+        <div>
+          <label class="block text-sm font-manrope mb-1">Subject</label>
+          <input
+            type="text"
+            class="w-full bg-gray-900 text-white px-4 py-3 rounded-md border border-gray-700 focus:outline-none focus:ring-2 focus:ring-lime-300"
+          />
+        </div>
+
+        <!-- Message -->
+        <div>
+          <label class="block text-sm font-manrope mb-1">Message</label>
+          <textarea
+            rows="4"
+            class="w-full bg-gray-900 text-white px-4 py-3 rounded-md border border-gray-700 focus:outline-none focus:ring-2 focus:ring-lime-300"
+          ></textarea>
+        </div>
+
+        <!-- Submit -->
+        <button
+          type="submit"
+          class="bg-lime-300 text-black px-6 py-2 rounded-full font-manrope font-semibold shadow-md hover:bg-lime-400 transition"
+        >
+          SUBMIT
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
 
 
