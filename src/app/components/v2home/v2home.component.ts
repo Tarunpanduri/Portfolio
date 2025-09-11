@@ -24,24 +24,31 @@ export class V2homeComponent {
   educationList = [
     {
       degree: 'Master of Business Administration (MBA)',
-      institution: 'JNTU Kakinada',
+      institution: 'DLR Pg College · Kakinada',
       years: '2023 – 2025',
       description:
         'Specialized in Management and Business Strategy with hands-on projects and a focus on practical leadership skills.'
     },
     {
-      degree: 'Bachelor of Technology (B.Tech) in Computer Science',
-      institution: 'Aditya Engineering College',
-      years: '2019 – 2023',
+      degree: 'Bachelor of Computer Science (B.Sc Mecs)',
+      institution: 'Aditya Degree College · Rajahmundry',
+      years: '2020 – 2023',
       description:
         'Gained a strong foundation in software development, algorithms, and full-stack web development.'
     },
     {
       degree: 'Intermediate Education',
-      institution: 'Aditya Junior College',
-      years: '2017 – 2019',
+      institution: 'Narayana Junior College · Kakinada',
+      years: '2018 – 2020',
       description:
         'Completed coursework in Mathematics, Physics, and Chemistry, building problem-solving and analytical skills.'
+    },
+    {
+      degree: 'High School',
+      institution: 'Little Buds School · Kakinada',
+      years: '2017 – 2018',
+      description:
+        'Graduated with a focus on Science and Mathematics, laying the groundwork for future academic pursuits.'
     }
   ];
 
