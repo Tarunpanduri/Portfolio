@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
-import { environment } from '../../../environments/environments';
+import { environment } from '../../../environments/environment.prod';
+
 
 interface Experience {
   role: string;
@@ -29,6 +30,16 @@ interface Project {
   styleUrl: './v2home.component.css'
 })
 export class V2homeComponent {
+    mobileMenuOpen = false;
+
+    closeAfterScroll() {
+  setTimeout(() => {
+    this.mobileMenuOpen = false;
+  }, 100); 
+}
+
+
+
     skills: string[] = [
     'HTML5',
     'CSS',
