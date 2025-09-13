@@ -1,8 +1,10 @@
 export const environment = {
   production: false,
   emailJs: {
-    serviceId: 'service_nkfgbvm',
-    templateId: 'template_1fued79',
-    publicKey: 'IsCY2MddaYmulMGCc'
+    serviceId: 'your service id',
+    templateId: 'your template id',
+    publicKey: 'your public key'
   }
 };
+
+// create `environment.prod.ts` and use actual values for production
