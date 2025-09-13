@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 
 import { FormsModule } from '@angular/forms';
 import { V2homeComponent } from './components/v2home/v2home.component';
-import { V2aboutComponent } from './components/v2about/v2about.component';
 import { AnimateOnScrollDirective } from './directives/AnimateOnScroll/animate-on-scroll.directive';
 import { NgOptimizedImage } from '@angular/common';
 
@@ -18,7 +17,6 @@ import { NgOptimizedImage } from '@angular/common';
   declarations: [
     AppComponent,
     V2homeComponent,
-    V2aboutComponent,
     AnimateOnScrollDirective 
   ],
   imports: [

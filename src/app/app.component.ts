@@ -8,25 +8,4 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  activeSection = 'about';
-  activeVersion: 'v2' | 'v1' = 'v2';
-  showSwitcher = false;
-
-  setActiveSection(section: string) {
-    this.activeSection = section;
-  }
-
-  setVersion(version: 'v2' | 'v1') {
-    this.activeVersion = version;
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // scroll to top on switch
-  }
-
-  @HostListener('window:scroll', [])
-  onScroll() {
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    const windowHeight = window.innerHeight;
-    const fullHeight = document.documentElement.scrollHeight;
-
-    this.showSwitcher = scrollTop + windowHeight >= fullHeight - 50; 
-  }
 }

@@ -6,30 +6,31 @@
   >
     <h1 class="font-bebas text-[28px] tracking-wide">TARUN PANDURI</h1>
 
-    <!-- Desktop nav -->
-    <nav class="space-x-8 hidden md:flex font-manrope text-sm text-gray-300">
-      <a href="#Work" class="hover:text-white transition">Work</a>
+    <nav class="space-x-8 hidden md:flex font-manrope  font-semibold text-sm text-gray-300">
       <a href="#About" class="hover:text-white transition">About</a>
+      <a href="#Projects" class="hover:text-white transition">Work</a>
       <a href="#Contact" class="hover:text-white transition">Contact</a>
     </nav>
 
-    <!-- Mobile menu button -->
     <button
       class="md:hidden flex items-center justify-center text-gray-300 hover:text-white focus:outline-none mb-1"
       (click)="mobileMenuOpen = true"
     >
-      <img src="assets/v2/menuu.png" class="w-7 h-7" alt="Menu toggle" />
+      <img
+        src="assets/v2/menuu.png"
+        loading="eager"
+        class="w-7 h-7"
+        alt="Menu toggle"
+      />
     </button>
   </header>
 
-  <!-- Mobile nav overlay -->
   <div
     class="fixed inset-0 z-40 flex pointer-events-none"
     [class.pointer-events-auto]="mobileMenuOpen"
   >
-    <!-- Drawer -->
     <div
-      class="bg-lime-300 w-[70%] h-full flex flex-col p-6 space-y-8 transform transition-transform duration-500 ease-in-out"
+      class="bg-lime-300 w-[70%] h-full flex flex-col p-6 space-y-8 transform transition-transform duration-500 ease-in-out md:hidden"
       [ngClass]="mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'"
     >
       <a
@@ -69,7 +70,6 @@
       </a>
     </div>
 
-    <!-- Blur overlay with close button -->
     <div
       class="w-[30%] h-full bg-black/50 backdrop-blur-sm relative transition-opacity duration-500 ease-in-out"
       [ngClass]="
@@ -142,7 +142,7 @@
       class="w-full max-w-md opacity-0 translate-x-10 animate-slideRight mb-8 md:mb-0"
     >
       <img
-        src="assets/v2/hero.JPG"
+        src="assets/v2/heroo.jpg"
         alt="Tarun Panduri"
         class="rounded-xl w-full object-cover"
         loading="eager"
@@ -358,7 +358,6 @@
   class="bg-black text-white py-10 md:py-16 px-6 md:px-[2.5rem] lg:px-[4.5rem] overflow-hidden"
 >
   <div class="container mx-auto">
-    <!-- Header -->
     <h2 class="text-5xl md:text-6xl font-bebas tracking-wide mb-2">
       FEATURED PROJECTS
     </h2>
@@ -367,15 +366,12 @@
       front-end development.
     </p>
 
-    <!-- Cards -->
     <div class="space-y-16">
       <ng-container *ngFor="let p of projects; let i = index">
-        <!-- Each card: left image panel + right info. Use items-stretch so left panel matches right height -->
         <div
           class="flex flex-col md:flex-row items-stretch gap-8"
           [attr.aria-labelledby]="'project-' + i + '-title'"
         >
-          <!-- Left panel (gray background, image centered, tag) -->
           <div class="md:w-1/2 bg-transparent flex flex-col">
             <div
               class="bg-[#1A1A1A] rounded-lg p-6 h-full flex flex-col"
@@ -383,23 +379,21 @@
               appAnimateOnScroll
               [style.animationDelay]="0.1 + i * 0.08 + 's'"
             >
-              <!-- tag -->
               <span
                 class="inline-block bg-gray-800 text-xs font-semibold font-manrope px-3 py-1 rounded-full mb-4 self-start"
               >
                 {{ p.tag }}
               </span>
 
-              <!-- image container fills remaining height, image centered -->
               <div class="flex-1 flex items-center justify-center">
                 <div
                   class="w-full max-w-[420px] rounded-md overflow-hidden bg-[#1f1f1f] p-4"
                 >
-                  <!-- inner mock frame: image is smaller than the gray frame to show surrounding gray -->
                   <img
                     [src]="p.image"
                     [alt]="p.title"
                     class="w-full h-auto object-cover rounded-md shadow-sm"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -407,7 +401,6 @@
             </div>
           </div>
 
-          <!-- Right info -->
           <div
             class="md:w-1/2 space-y-4 flex flex-col justify-center"
             [class.opacity-0]="true"
@@ -425,7 +418,6 @@
               {{ p.description }}
             </p>
 
-            <!-- metadata with underlines -->
             <div class="text-sm font-manrope space-y-2 mt-2">
               <div
                 class="flex justify-between items-center py-2 border-b border-gray-800"
@@ -455,7 +447,6 @@
                 <span class="text-white">{{ p.role || "-" }}</span>
               </div>
             </div>
-            <!-- links or highlight -->
             <div class="flex gap-6 mt-4">
               <span
                 class="text-lime-300 text-[14px] md:text-[16px] font-semibold"
@@ -652,9 +643,11 @@
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-black text-white px-6 flex justify-between items-center py-2">
+<footer
+  class="bg-black text-white px-6 flex justify-between items-center py-2 md:hidden"
+>
   <p
-    class="mb-2 text-xs font-manrope text-white md:hidden"
+    class="mb-2 text-xs font-manrope text-white"
     appAnimateOnScroll
     style="animation-delay: 0.2s"
   >
