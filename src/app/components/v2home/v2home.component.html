@@ -6,7 +6,9 @@
   >
     <h1 class="font-bebas text-[28px] tracking-wide">TARUN PANDURI</h1>
 
-    <nav class="space-x-8 hidden md:flex font-manrope  font-semibold text-sm text-gray-300">
+    <nav
+      class="space-x-8 hidden md:flex font-manrope font-semibold text-sm text-gray-300"
+    >
       <a href="#About" class="hover:text-white transition">About</a>
       <a href="#Projects" class="hover:text-white transition">Work</a>
       <a href="#Contact" class="hover:text-white transition">Contact</a>
@@ -17,7 +19,7 @@
       (click)="mobileMenuOpen = true"
     >
       <img
-        src="assets/v2/menuu.png"
+        src="assets/v2/menuu.webp"
         loading="eager"
         class="w-7 h-7"
         alt="Menu toggle"
@@ -31,7 +33,7 @@
   >
     <div
       class="bg-lime-300 w-[70%] h-full flex flex-col p-6 space-y-8 transform transition-transform duration-500 ease-in-out md:hidden"
-      [ngClass]="mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'"
+      [ngClass]="mobileMenuOpen ? 'translate-x-[-10]' : '-translate-x-full'"
     >
       <a
         href="#About"
@@ -82,7 +84,7 @@
         (click)="mobileMenuOpen = false"
       >
         <img
-          ngSrc="assets/v2/closee.png"
+          ngSrc="assets/v2/closee.webp"
           width="28"
           height="28"
           alt="Close menu"
@@ -115,7 +117,7 @@
       <div class="flex items-center gap-4 mt-8">
         <a
           href="#Contact"
-          class="bg-lime-300 text-black font-manrope text-sm px-6 py-3 rounded-full shadow hover:bg-lime-500 transition"
+          class="bg-lime-300 text-black font-manrope font-semibold text-sm px-6 py-3 rounded-full shadow hover:bg-lime-500 transition"
         >
           CONTACT ME
         </a>
@@ -125,12 +127,14 @@
           class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 transition transform hover:scale-110 text-white hover:text-[#0A66C2]"
         >
           <i
+            aria-label="LinkedIn"
             class="fa-brands fa-linkedin-in hover:text-[#0A66C2] transition"
           ></i>
         </a>
 
         <a
           href="https://github.com/Tarunpanduri"
+          aria-label="GitHub"
           class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 transition transform hover:scale-110 text-white hover:text-red-300"
         >
           <i class="fa-brands fa-github transition"></i>
@@ -142,7 +146,7 @@
       class="w-full max-w-md opacity-0 translate-x-10 animate-slideRight mb-8 md:mb-0"
     >
       <img
-        src="assets/v2/heroo.jpg"
+        src="assets/v2/heroo.webp"
         alt="Tarun Panduri"
         class="rounded-xl w-full object-cover"
         loading="eager"
@@ -512,17 +516,20 @@
           >
             <a
               href="https://www.linkedin.com/in/tarun-panduri/"
+              aria-label="LinkedIn"
               class="w-10 h-10 flex items-center justify-center rounded-full text-lime-200 hover:text-blue-500 transition"
             >
               <i class="fab fa-linkedin-in"></i>
             </a>
             <a
               href="https://github.com/Tarunpanduri"
+              aria-label="GitHub"
               class="w-10 h-10 flex items-center justify-center rounded-full text-lime-200 hover:text-red-500 transition"
             >
               <i class="fab fa-github"></i>
             </a>
             <a
+              aria-label="Instagram"
               href="https://www.instagram.com/tarun._.panduri?igsh=MTBlemg3Znc0azd2cw%3D%3D&utm_source=qr"
               class="w-10 h-10 flex items-center justify-center rounded-full text-lime-200 hover:text-pink-500 transition"
             >
@@ -553,9 +560,11 @@
         <p *ngIf="successMessage" class="text-lime-300 text-sm">
           {{ successMessage }}
         </p>
+
         <div>
-          <label class="block text-sm font-manrope mb-1">Name</label>
+          <label for="name" class="block text-sm font-manrope mb-1">Name</label>
           <input
+            id="name"
             type="text"
             [(ngModel)]="name"
             name="name"
@@ -565,8 +574,11 @@
         </div>
 
         <div>
-          <label class="block text-sm font-manrope mb-1">Email</label>
+          <label for="email" class="block text-sm font-manrope mb-1"
+            >Email</label
+          >
           <input
+            id="email"
             type="email"
             [(ngModel)]="email"
             name="email"
@@ -587,8 +599,11 @@
         </div>
 
         <div>
-          <label class="block text-sm font-manrope mb-1">Subject</label>
+          <label for="subject" class="block text-sm font-manrope mb-1"
+            >Subject</label
+          >
           <input
+            id="subject"
             type="text"
             [(ngModel)]="subject"
             name="subject"
@@ -598,8 +613,11 @@
         </div>
 
         <div>
-          <label class="block text-sm font-manrope mb-1">Message</label>
+          <label for="message" class="block text-sm font-manrope mb-1"
+            >Message</label
+          >
           <textarea
+            id="message"
             rows="4"
             [(ngModel)]="message"
             name="message"
@@ -607,6 +625,7 @@
             class="w-full bg-gray-900 text-white px-4 py-3 rounded-md border border-gray-700 focus:outline-none focus:ring-2 focus:ring-lime-300"
           ></textarea>
         </div>
+
         <button
           type="submit"
           [disabled]="isLoading"

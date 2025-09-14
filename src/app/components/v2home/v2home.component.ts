@@ -98,7 +98,7 @@ export class V2homeComponent {
 projects: Project[] = [
 {
   tag: 'Website',
-  image: 'assets/v2/p1.png',
+  image: 'assets/v2/p1.webp',
   title: 'Clim IT Company Website',
   description:
     'Developed the official website for Clim IT, focusing on a clean layout, clear service presentation, and responsive design for all devices. The site highlights company offerings and provides easy navigation for potential clients.',
@@ -110,7 +110,7 @@ projects: Project[] = [
 },
 {
   tag: 'Web Application',
-  image: 'assets/v2/p2.jpg',
+  image: 'assets/v2/p2.webp',
   title: 'TolzeTech HRM System',
   description:
     'Developed a custom Human Resource Management system for TolzeTech to streamline employee data, attendance tracking, and payroll processes. Focused on creating an intuitive interface and scalable architecture to support future growth.',
@@ -122,7 +122,7 @@ projects: Project[] = [
 },
 {
   tag: 'Mobile Application',
-  image: 'assets/v2/p3.png',
+  image: 'assets/v2/p3.webp',
   title: 'Onequest App',
   description:
     'Developed a feature in the Onequest App that dynamically displays the top-rated service for a user-selected address, leveraging modern React patterns, API integration, and responsive design for seamless mobile experience.',
@@ -134,7 +134,7 @@ projects: Project[] = [
 },
 {
   tag: 'Design',
-  image: 'assets/v2/p4.png',
+  image: 'assets/v2/p4.webp',
   title: 'Royal Touch App Design',
   description:
     'Designed the Royal Touch mobile app in Figma, creating user-friendly interfaces, visually appealing layouts, and an intuitive user experience tailored to the client’s brand identity.',
