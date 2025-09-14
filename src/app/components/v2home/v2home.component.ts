@@ -110,7 +110,7 @@ projects: Project[] = [
 },
 {
   tag: 'Web Application',
-  image: 'assets/v2/p2.png',
+  image: 'assets/v2/p2.jpg',
   title: 'TolzeTech HRM System',
   description:
     'Developed a custom Human Resource Management system for TolzeTech to streamline employee data, attendance tracking, and payroll processes. Focused on creating an intuitive interface and scalable architecture to support future growth.',
