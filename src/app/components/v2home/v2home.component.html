@@ -1,0 +1,570 @@
+<div class="relative min-h-screen bg-black text-white flex flex-col overflow-hidden">
+  <header
+    class="flex justify-between items-center px-4 md:px-16 py-6 opacity-0 -translate-y-10 animate-slideDown mb-4 md:mb-0 relative z-30">
+    <h1 class="font-bebas text-[28px] tracking-wide">TARUN PANDURI</h1>
+
+    <nav class="space-x-8 hidden md:flex font-manrope font-semibold text-sm text-gray-300">
+      <a href="#About" class="hover:text-white transition">About</a>
+      <a href="#Projects" class="hover:text-white transition">Work</a>
+      <a href="#Contact" class="hover:text-white transition">Contact</a>
+    </nav>
+
+    <button class="md:hidden flex items-center justify-center text-gray-300 hover:text-white focus:outline-none mb-1"
+      (click)="mobileMenuOpen = true">
+      <img src="assets/v2/menuu.webp" loading="eager" class="w-7 h-7" alt="Menu toggle" />
+    </button>
+  </header>
+
+  <div class="fixed inset-0 z-40 flex pointer-events-none" [class.pointer-events-auto]="mobileMenuOpen">
+    <div
+      class="bg-lime-300 w-[70%] h-full flex flex-col p-6 space-y-8 transform transition-transform duration-500 ease-in-out md:hidden font-manrope"
+      [ngClass]="mobileMenuOpen ? 'translate-x-[-10]' : '-translate-x-full'">
+      <a href="#About" (click)="closeAfterScroll()" class="text-black font-semibold transition">
+        About
+      </a>
+      <a href="#Education" (click)="closeAfterScroll()" class="text-black font-semibold transition font-manrope">
+        Education
+      </a>
+      <a href="#Capabilities" (click)="closeAfterScroll()" class="text-black font-semibold transition font-manrope">
+        Capabilities
+      </a>
+      <a href="#Experience" (click)="closeAfterScroll()" class="text-black font-semibold transition font-manrope">
+        Experience
+      </a>
+      <a href="#Contact" (click)="closeAfterScroll()" class="text-black font-semibold transition font-manrope">
+        Contact
+      </a>
+    </div>
+
+    <div class="w-[30%] h-full bg-black/50 backdrop-blur-sm relative transition-opacity duration-500 ease-in-out"
+      [ngClass]="
+        mobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      " (click)="mobileMenuOpen = false">
+      <button class="absolute top-6 right-6 text-white" (click)="mobileMenuOpen = false">
+        <img ngSrc="assets/v2/closee.webp" width="28" height="28" alt="Close menu" priority="false" loading="lazy"
+          class="w-7 h-7" />
+        </button>
+      </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <main class="flex flex-col lg:flex-row items-center justify-between px-4 flex-1 md:px-[14rem] gap-12">
+      <div class="flex flex-col items-start max-w-lg opacity-0 -translate-x-10 animate-slideLeft">
+        <h2 class="text-5xl md:text-6xl lg:text-6xl font-bebas leading-tight">
+          HI, I AM <br />
+          TARUN PANDURI
+        </h2>
+        <p class="mt-4 text-gray-400 font-manrope text-base md:text-lg leading-relaxed">
+          A digital developer focused on transforming your ideas into real,
+          working services.
+        </p>
+
+        <div class="flex items-center gap-4 mt-8">
+          <a href="#Contact"
+            class="bg-lime-300 text-black font-manrope font-semibold text-sm px-6 py-3 rounded-full shadow hover:bg-lime-500 transition">
+            CONTACT ME
+          </a>
+
+          <a href="https://www.linkedin.com/in/tarun-panduri/" aria-label="LinkedIn"
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 transition transform hover:scale-110 text-white hover:text-[#0A66C2] ">
+            <!-- LinkedIn SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+              class="w-4 h-4 fill-current hover:fill-[#0A66C2] transition">
+            <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 
+    0 83.5 0 53.8a53.79 53.79 0 0 1 107.6 0c0 29.7-24.09 
+    54.3-53.81 54.3zM447.9 448h-92.4V304.1c0-34.3-.7-78.4-47.7-78.4-47.7 
+    0-55 37.3-55 75.9V448h-92.5V148.9h88.8v40.8h1.3c12.4-23.5 
+    42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+              </svg>
+            </a>
+
+            <a href="https://github.com/Tarunpanduri" aria-label="GitHub"
+              class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 transition transform hover:scale-110 text-white hover:text-red-500 ">
+              <!-- GitHub SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"
+                class="w-4 h-4 fill-current hover:fill-red-500 transition">
+            <path d="M165.9 397.4c0 2-2.3 3.6-5.2 
+    3.6-3.1.3-5.5-1.3-5.5-3.6 0-2 
+    2.3-3.6 5.2-3.6 3-.3 5.5 
+    1.3 5.5 3.6zm-31.1-4.5c-.7 
+    2 .7 4.3 3.4 4.9 2.6.7 
+    5.5-.3 6.2-2.3.7-2-.7-4.3-3.4-4.9-2.6-.7-5.5.3-6.2 
+    2.3zm44.2-1.7c-2.9.7-4.8 
+    2.9-4.5 5.2.3 2.3 2.9 3.6 
+    5.9 2.9 2.9-.7 4.8-2.9 
+    4.5-5.2-.3-2.2-2.9-3.6-5.9-2.9zM244 
+    8C109.4 8 0 117.6 0 252c0 
+    108.9 70.7 201.3 169.1 
+    234.1 12.8 2.3 17.3-5.5 
+    17.3-12.1 0-6.2-.3-26.9-.3-48.9-69 
+    15.1-83.7-29.6-83.7-29.6-11.4-28.8-27.8-36.4-27.8-36.4-22.9-15.7 
+    1.7-15.4 1.7-15.4 25.4 
+    1.7 38.9 26.2 38.9 26.2 
+    22.6 38.9 59.5 27.5 74.2 
+    20.9 2.3-16.5 8.8-27.5 
+    16-33.9-55-6.2-112.6-27.8-112.6-123.5 
+    0-27.5 9.8-49.9 
+    25.7-67.5-2.6-6.2-11.1-31.7 
+    2.5-66.1 0 0 21.2-6.9 
+    69.5 25.7 20.6-5.7 42.5-8.5 
+    64.4-8.5s43.8 2.9 64.4 
+    8.5c48.3-32.6 69.5-25.7 
+    69.5-25.7 13.7 34.4 
+    5.2 59.9 2.6 66.1 15.9 
+    17.6 25.7 40 25.7 67.5 
+    0 95.9-57.9 117.3-113.2 
+    123.2 9.1 7.9 17 22.9 
+    17 46.6 0 33.9-.3 61.2-.3 
+    69.5 0 6.6 4.5 14.4 
+    17.6 11.8C425.3 453.3 
+    496 360.9 496 252 496 117.6 
+    386.6 8 252 8z" />
+                </svg>
+              </a>
+
+            </div>
+          </div>
+
+          <div class="w-full max-w-md opacity-0 translate-x-10 animate-slideRight mb-8 md:mb-0">
+            <img
+              src="assets/v2/heroo-400.webp"
+  srcset="
+    assets/v2/heroo-400.webp   400w,
+    assets/v2/heroo-800.webp   800w,
+    assets/v2/heroo-1218.webp 1218w,
+    assets/v2/heroo-2000.webp 2000w
+  "
+  sizes="(max-width: 599.98px) 100vw,   
+         (max-width: 959.98px) 80vw,    
+         (max-width: 1279.98px) 60vw,   
+         (max-width: 1919.98px) 80vw,  
+         2000px"
+              alt="Hero image"
+              class="rounded-xl w-full object-cover"
+              loading="eager"
+              fetchpriority="high"
+              />
+
+            </div>
+          </main>
+        </div>
+
+        <div class="border border-gray-800"></div>
+
+        <!-- ABOUT ME -->
+        <section id="About" class="bg-black text-white py-10 md:py-16 px-6 md:px-[2.5rem] lg:px-[4.5rem] overflow-hidden">
+          <div class="container mx-auto flex flex-col md:flex-row items-start gap-0 md:gap-12">
+            <div class="md:w-1/3 md:text-left opacity-0" appAnimateOnScroll>
+              <h2 class="text-5xl md:text-6xl font-bebas tracking-wide text-white">
+                ABOUT ME
+              </h2>
+            </div>
+
+            <div class="md:w-2/3 space-y-2 md:space-y-6">
+              <p class="text-lg font-manrope font-semibold leading-relaxed text-gray-100 opacity-0" appAnimateOnScroll
+                style="animation-delay: 0.2s">
+                A Web Developer from Kakinada, Building Clean and Functional Digital
+                Solutions
+              </p>
+
+              <p class="text-sm md:text-base font-manrope leading-relaxed text-gray-400 opacity-0" appAnimateOnScroll
+                style="animation-delay: 0.4s">
+                I’m Tarun Panduri, a Web Developer from Kakinada with core expertise in
+                building modern, responsive, and efficient websites. I specialize in
+                turning ideas into functional web experiences that are fast, reliable,
+                and easy to use. Alongside web development, I also have some experience
+                in App development support, which adds to my ability to create
+                well-rounded digital solutions. <span class="mb-2 md:mb-4"></span>
+                <span class="mb-2 md:mb-4"></span>
+                My approach combines solid coding practices with an understanding of
+                user needs, ensuring that every website I build is both technically
+                sound and user-friendly. While I enjoy working with design tools like
+                Figma, my core strength lies in bringing designs to life through clean,
+                scalable code. Whether you need a simple landing page or a complex web
+                application, I’m here to help you create a digital presence that stands
+                out and performs seamlessly.
+              </p>
+
+              <div class="flex flex-wrap items-center gap-4 opacity-0" appAnimateOnScroll style="animation-delay: 0.6s">
+                <a href="assets/v2/TARUN PANDURI RESUME.pdf"
+                  class="bg-lime-300 text-black px-6 py-2 rounded-full font-manrope font-semibold text-sm shadow-md hover:bg-lime-400 transition transform hover:scale-105">
+                  VIEW RESUME
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="border border-gray-800"></div>
+
+        <!-- EDUCATION SECTION -->
+        <section id="Education" class="bg-black text-white py-10 md:py-16 px-6 md:px-[2.5rem] lg:px-[4.5rem] overflow-hidden">
+          <div class="container mx-auto flex flex-col md:flex-row items-start gap-0 md:gap-12">
+            <div class="md:w-1/3 md:text-left opacity-0" appAnimateOnScroll>
+              <h2 class="text-5xl md:text-6xl font-bebas tracking-wide text-white">
+                EDUCATION
+              </h2>
+            </div>
+
+            <div class="md:w-2/3 space-y-5 md:space-y-10 mt-2 md:mt-0">
+              @for (edu of educationList; track edu; let i = $index) {
+                <div class="opacity-0" appAnimateOnScroll
+                  [style.animation-delay]="i * 0.2 + 's'">
+                  <h3 class="text-xl font-manrope font-semibold text-white underline decoration-lime-300 rounded-lg">
+                    {{ edu.degree }}
+                  </h3>
+                  <p class="text-sm text-gray-400">
+                    {{ edu.institution }} · {{ edu.years }}
+                  </p>
+                  <p class="mt-2 text-sm text-gray-300 leading-relaxed">
+                    {{ edu.description }}
+                  </p>
+                </div>
+              }
+            </div>
+          </div>
+        </section>
+
+        <div class="border border-gray-800"></div>
+
+        <!-- CAPABILITIES SECTION -->
+        <section id="Capabilities"
+          class="bg-black text-white py-10 md:py-16 px-6 md:px-[2.5rem] lg:px-[4.5rem] overflow-hidden">
+          <div class="container mx-auto flex flex-col md:flex-row items-start gap-0 md:gap-12">
+            <div class="md:w-1/3 text-center md:text-left opacity-0" appAnimateOnScroll>
+              <h2 class="text-5xl md:text-6xl font-bebas tracking-wide text-white">
+                MY CAPABILITIES
+              </h2>
+            </div>
+
+            <div class="md:w-2/3 space-y-6">
+              <p class="text-sm md:text-base font-manrope leading-relaxed text-gray-400 opacity-0" appAnimateOnScroll
+                style="animation-delay: 0.2s">
+                My skill set is always evolving — I believe growth comes from curiosity
+                and the drive to learn. I actively explore new technologies, refine my
+                techniques, and adapt to emerging trends to bring fresh, innovative
+                solutions to the table.
+              </p>
+
+              <div class="flex flex-wrap gap-4 opacity-0" appAnimateOnScroll style="animation-delay: 0.4s">
+                @for (skill of skills; track skill) {
+                  <span
+                    class="px-5 py-2 rounded-full border-2 border-gray-500 text-sm font-manrope text-gray-300 hover:bg-lime-300 hover:text-black transition cursor-pointer">
+                    {{ skill }}
+                  </span>
+                }
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="border border-gray-800"></div>
+
+        <!-- EXPERIENCES -->
+        <section id="Experience" class="bg-black text-white py-10 md:py-16 px-6 md:px-[2.5rem] lg:px-[4.5rem]">
+          <div class="container mx-auto flex flex-col md:flex-row gap-0 md:gap-12">
+            <div class="md:w-1/3 md:text-left opacity-0" appAnimateOnScroll>
+              <h2 class="text-5xl md:text-6xl font-bebas tracking-wide">
+                MY EXPERIENCE
+              </h2>
+            </div>
+            <div class="md:w-2/3 space-y-5 md:space-y-10 mt-2 md:mt-0">
+              @for (exp of experiences; track exp; let i = $index) {
+                <div class="flex flex-col md:flex-row md:justify-between">
+                  <div>
+                    <h3 class="text-lg font-manrope font-semibold text-white opacity-0" appAnimateOnScroll
+                      [style.animation-delay]="0.2 + i * 0.4 + 's'">
+                      {{ exp.role }}
+                    </h3>
+                    <p class="text-sm font-manrope font-semibold text-lime-300 my-1 opacity-0" appAnimateOnScroll
+                      [style.animation-delay]="0.4 + i * 0.4 + 's'">
+                      - {{ exp.company }}
+                    </p>
+                    <p class="text-sm font-manrope text-gray-400 max-w-2xl opacity-0" appAnimateOnScroll
+                      [style.animation-delay]="0.6 + i * 0.4 + 's'">
+                      {{ exp.description }}
+                    </p>
+                  </div>
+                  <span class="text-sm font-manrope text-gray-300 mt-2 md:mt-0 opacity-0" appAnimateOnScroll
+                    [style.animation-delay]="0.8 + i * 0.4 + 's'">
+                    {{ exp.duration }}
+                  </span>
+                </div>
+              }
+            </div>
+          </div>
+        </section>
+
+        <div class="border border-gray-800"></div>
+
+        <!-- FEATURED PROJECTS -->
+        <section id="Projects" class="bg-black text-white py-10 md:py-16 px-6 md:px-[2.5rem] lg:px-[4.5rem] overflow-hidden">
+          <div class="container mx-auto">
+            <h2 class="text-5xl md:text-6xl font-bebas tracking-wide mb-2">
+              FEATURED PROJECTS
+            </h2>
+            <p class="text-sm md:text-base font-manrope text-gray-400 mb-10 max-w-2xl">
+              Here are some of the selected projects that showcase my passion for
+              front-end development.
+            </p>
+
+            <div class="space-y-16">
+              @for (p of projects; track p; let i = $index) {
+                <div class="flex flex-col md:flex-row items-stretch gap-8" [attr.aria-labelledby]="'project-' + i + '-title'">
+                  <div class="md:w-1/2 bg-transparent flex flex-col">
+                    <div class="bg-[#1A1A1A] rounded-lg p-6 h-full flex flex-col" [class.opacity-0]="true" appAnimateOnScroll
+                      [style.animationDelay]="0.1 + i * 0.08 + 's'">
+                      <span
+                        class="inline-block bg-gray-800 text-xs font-semibold font-manrope px-3 py-1 rounded-full mb-4 self-start">
+                        {{ p.tag }}
+                      </span>
+                      <div class="flex-1 flex items-center justify-center">
+                        <div class="w-full max-w-[420px] rounded-md overflow-hidden bg-[#1f1f1f] p-4">
+                          <img [src]="p.image" [alt]="p.title" class="w-full h-auto object-cover rounded-md shadow-sm"
+                            loading="lazy" />
+                          </div>
+                        </div>
+                        <span class="h-10"></span>
+                      </div>
+                    </div>
+                    <div class="md:w-1/2 space-y-4 flex flex-col justify-center" [class.opacity-0]="true" appAnimateOnScroll
+                      [style.animationDelay]="0.25 + i * 0.08 + 's'">
+                      <h3 id="project-{{ i }}-title" class="text-xl md:text-2xl font-manrope font-semibold">
+                        {{ p.title }}
+                      </h3>
+                      <p class="text-sm md:text-base text-gray-400 leading-relaxed">
+                        {{ p.description }}
+                      </p>
+                      <div class="text-sm font-manrope space-y-2 mt-2">
+                        <div class="flex justify-between items-center py-2 border-b border-gray-800">
+                          <span class="text-gray-400">Project Info</span>
+                          <span class="text-white">{{ p.projectInfo || "-" }}</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-gray-800">
+                          <span class="text-gray-400">Client</span>
+                          <span class="text-white">{{ p.client || "-" }}</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-gray-800">
+                          <span class="text-gray-400">Year</span>
+                          <span class="text-white">{{ p.year || "-" }}</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-gray-800">
+                          <span class="text-gray-400">Role</span>
+                          <span class="text-white">{{ p.role || "-" }}</span>
+                        </div>
+                      </div>
+                      <div class="flex gap-6 mt-4">
+                        <span class="text-lime-300 text-[14px] md:text-[16px] font-semibold">{{ p.Contribution }}</span>
+                      </div>
+                    </div>
+                  </div>
+                }
+              </div>
+            </div>
+          </section>
+
+          <div class="border border-gray-800"></div>
+
+          <!-- CONTACT SECTION -->
+          <section id="Contact" class="bg-black text-white py-10 md:py-16 px-6 md:px-[2.5rem] lg:px-[4.5rem] overflow-hidden">
+            <div class="container mx-auto flex flex-col md:flex-row gap-6 md:gap-12">
+              <div class="md:w-1/3 flex flex-col justify-between gap-6">
+                <div>
+                  <h2 class="text-5xl md:text-6xl font-bebas mb-4 opacity-0" appAnimateOnScroll>
+                    LET’S CONNECT
+                  </h2>
+                  <div class="space-y-4">
+                    <div>
+                      <p class="text-sm font-manrope text-gray-300 mb-2 opacity-0" appAnimateOnScroll
+                        style="animation-delay: 0.2s">
+                        Say hello at
+                        <a href="mailto:Tarunpanduri88@gmail.com"
+                        class="inline underline decoration-lime-300">Tarunpanduri88@gmail.com</a>
+                      </p>
+
+                      <p class="text-sm font-manrope text-gray-300 opacity-0" appAnimateOnScroll style="animation-delay: 0.4s">
+                        Contact me at
+                        <a href="tel:+919014031909" class="inline underline decoration-lime-300">+91 90140 31909</a>
+                      </p>
+                    </div>
+
+                    <div class="flex gap-2 opacity-0 ml-[-0.8rem]" appAnimateOnScroll style="animation-delay: 0.6s">
+                      <a href="https://www.linkedin.com/in/tarun-panduri/" aria-label="LinkedIn"
+                        class="w-10 h-10 flex items-center justify-center rounded-full text-lime-200 hover:text-blue-500 transition">
+                        <!-- LinkedIn -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-5 h-5 fill-current">
+                <path d="M100.28 448H7.4V148.9h92.88zM53.79 
+    108.1C24.09 108.1 0 83.5 0 53.8a53.79 
+    53.79 0 0 1 107.6 0c0 29.7-24.09 
+    54.3-53.81 54.3zM447.9 448h-92.4V304.1c0-34.3-.7-78.4-47.7-78.4-47.7 
+    0-55 37.3-55 75.9V448h-92.5V148.9h88.8v40.8h1.3c12.4-23.5 
+    42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+                          </svg>
+                        </a>
+
+                        <a href="https://github.com/Tarunpanduri" aria-label="GitHub"
+                          class="w-10 h-10 flex items-center justify-center rounded-full text-lime-200 hover:text-red-500 transition">
+                          <!-- GitHub -->
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="w-5 h-5 fill-current">
+                <path d="M165.9 397.4c0 2-2.3 3.6-5.2 
+    3.6-3.1.3-5.5-1.3-5.5-3.6 0-2 
+    2.3-3.6 5.2-3.6 3-.3 5.5 
+    1.3 5.5 3.6zm-31.1-4.5c-.7 
+    2 .7 4.3 3.4 4.9 2.6.7 
+    5.5-.3 6.2-2.3.7-2-.7-4.3-3.4-4.9-2.6-.7-5.5.3-6.2 
+    2.3zm44.2-1.7c-2.9.7-4.8 
+    2.9-4.5 5.2.3 2.3 2.9 3.6 
+    5.9 2.9 2.9-.7 4.8-2.9 
+    4.5-5.2-.3-2.2-2.9-3.6-5.9-2.9zM244 
+    8C109.4 8 0 117.6 0 252c0 
+    108.9 70.7 201.3 169.1 
+    234.1 12.8 2.3 17.3-5.5 
+    17.3-12.1 0-6.2-.3-26.9-.3-48.9-69 
+    15.1-83.7-29.6-83.7-29.6-11.4-28.8-27.8-36.4-27.8-36.4-22.9-15.7 
+    1.7-15.4 1.7-15.4 25.4 
+    1.7 38.9 26.2 38.9 26.2 
+    22.6 38.9 59.5 27.5 74.2 
+    20.9 2.3-16.5 8.8-27.5 
+    16-33.9-55-6.2-112.6-27.8-112.6-123.5 
+    0-27.5 9.8-49.9 
+    25.7-67.5-2.6-6.2-11.1-31.7 
+    2.5-66.1 0 0 21.2-6.9 
+    69.5 25.7 20.6-5.7 42.5-8.5 
+    64.4-8.5s43.8 2.9 64.4 
+    8.5c48.3-32.6 69.5-25.7 
+    69.5-25.7 13.7 34.4 
+    5.2 59.9 2.6 66.1 15.9 
+    17.6 25.7 40 25.7 67.5 
+    0 95.9-57.9 117.3-113.2 
+    123.2 9.1 7.9 17 22.9 
+    17 46.6 0 33.9-.3 61.2-.3 
+    69.5 0 6.6 4.5 14.4 
+    17.6 11.8C425.3 453.3 
+    496 360.9 496 252 496 117.6 
+    386.6 8 252 8z" />
+                            </svg>
+                          </a>
+
+                          <a aria-label="Instagram"
+                            href="https://www.instagram.com/tarun._.panduri?igsh=MTBlemg3Znc0azd2cw%3D%3D&utm_source=qr"
+                            class="w-10 h-10 flex items-center justify-center rounded-full text-lime-200 hover:text-pink-500 transition ">
+                            <!-- Instagram -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-5 h-5 fill-current">
+                <path d="M224.1 141c-63.6 0-114.9 
+    51.3-114.9 114.9s51.3 114.9 
+    114.9 114.9S339 319.5 
+    339 255.9 287.7 141 224.1 
+    141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7 
+    0-41.1 33.5-74.7 74.7-74.7 
+    41.1 0 74.7 33.5 74.7 74.7 
+    0 41.1-33.6 74.7-74.7 74.7zm146.4-194.3c0 
+    14.9-12 26.8-26.8 26.8-14.9 
+    0-26.8-12-26.8-26.8s12-26.8 
+    26.8-26.8 26.8 12 26.8 26.8zm76.1 
+    27.2c-1.7-35.9-9.9-67.7-36.2-93.9s-58-34.5-93.9-36.2C293 
+    32 183 32 152.5 33.7c-35.9 
+    1.7-67.7 9.9-93.9 36.2s-34.5 
+    58-36.2 93.9C20.7 194.6 20.7 
+    318.6 22.4 349.1c1.7 35.9 9.9 
+    67.7 36.2 93.9s58 34.5 93.9 
+    36.2c30.5 1.7 140.5 1.7 
+    171 0 35.9-1.7 67.7-9.9 
+    93.9-36.2s34.5-58 36.2-93.9c1.7-30.5 
+    1.7-140.5 0-171zM398.8 
+    388c-7.8 19.6-22.9 34.7-42.6 
+    42.6-29.5 11.7-99.5 9-132.1 
+    9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 
+    9-132.1c7.8-19.6 22.9-34.7 
+    42.6-42.6 29.5-11.7 99.5-9 
+    132.1-9s102.7-2.6 132.1 9c19.6 
+    7.8 34.7 22.9 42.6 42.6 
+    11.7 29.5 9 99.5 9 132.1s2.7 
+    102.7-9 132.1z" />
+                              </svg>
+                            </a>
+
+                          </div>
+                        </div>
+                      </div>
+
+                      <p class="text-xs font-manrope text-white md:block hidden opacity-0" appAnimateOnScroll
+                        style="animation-delay: 0.2s">
+                        © 2025 Tarun Panduri
+                      </p>
+                    </div>
+
+                    <div class="md:w-2/3 mt-4 md:mt-0 opacity-0" appAnimateOnScroll style="animation-delay: 1s">
+                      <form class="space-y-6" (ngSubmit)="sendEmail()">
+                        @if (errorMessage) {
+                          <p class="text-red-500 text-sm">
+                            {{ errorMessage }}
+                          </p>
+                        }
+                        @if (successMessage) {
+                          <p class="text-lime-300 text-sm">
+                            {{ successMessage }}
+                          </p>
+                        }
+
+                        <div>
+                          <label for="name" class="block text-sm font-manrope mb-1">Name</label>
+                          <input id="name" type="text" [(ngModel)]="name" name="name"
+                            [ngClass]="{ 'border-red-500': errorMessage && !name }"
+                            class="w-full bg-gray-900 text-white px-4 py-3 rounded-md border border-gray-700 focus:outline-none focus:ring-2 focus:ring-lime-300" />
+                          </div>
+
+                          <div>
+                            <label for="email" class="block text-sm font-manrope mb-1">Email</label>
+          <input id="email" type="email" [(ngModel)]="email" name="email" required email [ngClass]="{
+              'border-red-500':
+                (errorMessage && !email) || (email && !isValidEmail(email))
+            }"
+                              class="w-full bg-gray-900 text-white px-4 py-3 rounded-md border border-gray-700 focus:outline-none focus:ring-2 focus:ring-lime-300" />
+                              @if (email && !isValidEmail(email)) {
+                                <p class="text-red-500 text-sm mt-1">
+                                  Please enter a valid email address.
+                                </p>
+                              }
+                            </div>
+
+                            <div>
+                              <label for="subject" class="block text-sm font-manrope mb-1">Subject</label>
+                              <input id="subject" type="text" [(ngModel)]="subject" name="subject"
+                                [ngClass]="{ 'border-red-500': errorMessage && !subject }"
+                                class="w-full bg-gray-900 text-white px-4 py-3 rounded-md border border-gray-700 focus:outline-none focus:ring-2 focus:ring-lime-300" />
+                              </div>
+
+                              <div>
+                                <label for="message" class="block text-sm font-manrope mb-1">Message</label>
+                                <textarea id="message" rows="4" [(ngModel)]="message" name="message"
+                                  [ngClass]="{ 'border-red-500': errorMessage && !message }"
+                                class="w-full bg-gray-900 text-white px-4 py-3 rounded-md border border-gray-700 focus:outline-none focus:ring-2 focus:ring-lime-300"></textarea>
+                              </div>
+
+                              <button type="submit" [disabled]="isLoading"
+                                class="bg-lime-300 text-black px-6 py-2 rounded-full font-manrope font-semibold shadow-md hover:bg-lime-500 transition flex items-center justify-center">
+                                @if (!isLoading) {
+                                  <span>SUBMIT</span>
+                                }
+                                @if (isLoading) {
+                                  <span class="flex items-center gap-2">
+                                    <svg class="w-5 h-5 animate-spin text-black" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                      viewBox="0 0 24 24">
+                                      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                                    </svg>
+                                    Sending...
+                                  </span>
+                                }
+                              </button>
+                            </form>
+                          </div>
+                        </div>
+                      </section>
+
+                      <!-- FOOTER -->
+                      <footer class="bg-black text-white px-6 flex justify-between items-center py-2 md:hidden">
+                        <p class="mb-2 text-xs font-manrope text-white" appAnimateOnScroll style="animation-delay: 0.2s">
+                          © 2025 Tarun Panduri
+                        </p>
+                      </footer>
