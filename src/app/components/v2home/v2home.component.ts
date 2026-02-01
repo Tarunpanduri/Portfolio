@@ -126,6 +126,19 @@ export class V2homeComponent {
 
   projects: Project[] = [
     {
+      tag: 'Mobile App',
+      image: 'assets/v2/p5.webp',
+      title: 'LocalBoys - Hyperlocal Delivery App',
+      description:
+        'Developed a cross-platform mobile application for hyperlocal delivery and tracking services using React Native. The app features real-time background location tracking, secure user authentication, and advertisement integration. Managed the end-to-end deployment pipeline using Expo EAS and successfully handled the iOS App Store submission.',
+      projectInfo: 'Service & Delivery Application',
+      client: 'LocalBoys',
+      year: '2026',
+      role: 'Mobile App Developer',
+      Contribution:
+        'React Native | Expo EAS | Real-time Geolocation | secure user authentication',
+    },
+    {
       tag: 'Website',
       image: 'assets/v2/p1.webp',
       title: 'Clim IT Company Website',
